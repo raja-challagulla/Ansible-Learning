@@ -1,0 +1,24 @@
+### Good Ansible Exmaples ######
+
+******** Ansible Variables Quick reference ****8
+https://github.com/lorin/ansible-quickref
+
+
+1. Ansible for Automating a school infrastructure
+https://github.com/crombeen/ansible
+
+2. Ansible Examples for Installing python, mysql, nginx etc
+https://github.com/dl528888/ansible-examples
+
+3. Ansible Linux OS Hardening
+https://github.com/dev-sec/ansible-os-hardening
+
+4. Ansible Windows OS Hardening
+https://github.com/dev-sec/ansible-windows-hardening
+
+5. Ansible Hardening Linux OS
+https://github.com/openstack/ansible-hardening
+
+
+""""""""""""""""""" Important interview questions for all topics""""""""""""
+https://github.com/bregman-arie/devops-exercises#devops

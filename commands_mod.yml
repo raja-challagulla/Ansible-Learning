@@ -1,0 +1,12 @@
+---
+-  name : Testing Command modue
+   hosts: awslist1
+   become: true
+
+   tasks:
+     -  name : run a test command
+        command: uptime
+        register: myvar1
+     -  name : print a message
+        debug:
+           msg: Hello

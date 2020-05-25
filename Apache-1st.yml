@@ -1,0 +1,61 @@
+---
+- name : Install and Configure HTTP
+  hosts : awslist1
+  become : true
+
+  tasks :
+    -  name : Install httpd rpm using yum
+       yum:
+           name : httpd
+           state : present
+
+    -  name : enable httpd service
+       service:
+           name : httpd
+           enabled : yes
+
+    -  name : Start httpd service
+       service:
+           name : httpd
+           state : started
+
+    -  name : Push virtual configuration
+       copy:
+           src: files/myapp
+           dest: /var/myfile1
+           mode: 0640
+
+    -  name : Remove the file
+       file:
+           name: /etc/httpd/rc.txt
+           state : absent
+       notify:
+         - Restart Apache
+
+    -  name : Create  a soft link
+       file:
+           src: /var/myfile1
+           dest: /etc/myfile2
+           state: link
+       notify:
+         - Restart Apache
+
+  handlers:
+    - name : Restart Apache
+      service:
+        name: httpd
+        state: restarted
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
